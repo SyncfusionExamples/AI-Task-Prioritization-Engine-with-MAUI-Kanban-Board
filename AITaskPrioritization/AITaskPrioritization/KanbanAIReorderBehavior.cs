@@ -8,6 +8,7 @@ namespace AITaskPrioritization
     {
         private SfButton? button;
         private Label? infoLabel;
+        private Border? infoContainer;
         private SfKanban? kanban;
         private ViewModel? viewModel;
         private AzureOpenAIBaseService aiService = new AzureOpenAIBaseService();
@@ -23,6 +24,7 @@ namespace AITaskPrioritization
 
             button = bindable.FindByName<SfButton>("aiSortButton");
             infoLabel = bindable.FindByName<Label>("infoLabel");
+            infoContainer = bindable.FindByName<Border>("infoContainer");
             kanban = bindable.FindByName<SfKanban>("kanbanBoard");
 
             if (button != null)
@@ -36,10 +38,16 @@ namespace AITaskPrioritization
             if (viewModel == null) return;
 
             button!.IsEnabled = false;
-            infoLabel!.IsVisible = false;
+            if (infoContainer != null)
+                infoContainer.IsVisible = false;
+
             await Task.Delay(50);
-            infoLabel.Text = "AI analyzing tasks...";
-            infoLabel.IsVisible = true;
+
+            infoLabel!.Text = "AI analyzing tasks...";
+
+            if (infoContainer != null)
+                infoContainer.IsVisible = true;
+
             infoLabel.Opacity = 0;
             await infoLabel.FadeToAsync(1, 150);
             await Task.Delay(50);
@@ -149,11 +157,13 @@ namespace AITaskPrioritization
             if (infoLabel != null)
             {
                 infoLabel.Text = message;
-                infoLabel.IsVisible = true;
+                if (infoContainer != null)
+                    infoContainer.IsVisible = true;
                 infoLabel.Opacity = 1;
                 await Task.Delay(2000);
                 await infoLabel.FadeToAsync(0, 300);
-                infoLabel.IsVisible = false;
+                if (infoContainer != null)
+                    infoContainer.IsVisible = false;
             }
 
             if (button != null)
@@ -185,7 +195,6 @@ namespace AITaskPrioritization
             }
             catch
             {
-                
             }
         }
 

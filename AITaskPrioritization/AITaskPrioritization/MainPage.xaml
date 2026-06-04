@@ -113,13 +113,13 @@
             </kanban:SfKanban.Resources>
 
             <!-- Columns -->
-            <kanban:KanbanColumn Title="To Do" Categories="Open" Background="#D6EAF5"
+            <kanban:KanbanColumn Title="To Do" Categories="Open" Background="#DAE0E3"
                              PlaceholderStyle="{StaticResource PlaceholderStyle}" />
 
-            <kanban:KanbanColumn Title="In Progress" Categories="In Progress" Background="#FFF8DC"
+            <kanban:KanbanColumn Title="In Progress" Categories="In Progress" Background="#D6EAF5"
                              PlaceholderStyle="{StaticResource PlaceholderStyle}" />
 
-            <kanban:KanbanColumn Title="Review" Categories="Code Review" Background="#FFE4E1"
+            <kanban:KanbanColumn Title="Review" Categories="Code Review" Background="#FFF8DC"
                              PlaceholderStyle="{StaticResource PlaceholderStyle}" />
 
             <kanban:KanbanColumn Title="Done" Categories="Done" Background="#DCEDDC" AllowDrag="False"
@@ -128,8 +128,14 @@
         </kanban:SfKanban>
 
         <!-- Info label -->
-        <Label x:Name="infoLabel" Grid.RowSpan="2" Margin="0,0,0,10" TextColor="Black" FontSize="20"
-           HorizontalOptions="Center" VerticalOptions="Center" Background="GhostWhite" FontAttributes="Bold"/>
+
+        <Border x:Name="infoContainer" Grid.RowSpan="2" HorizontalOptions="Center" VerticalOptions="Center"
+                Stroke="Black" StrokeThickness="1.5" BackgroundColor="GhostWhite" Padding="12"
+                StrokeShape="RoundRectangle 10" IsVisible="False">
+
+            <Label x:Name="infoLabel" TextColor="Black" FontSize="20" FontAttributes="Bold"
+                   HorizontalOptions="Center" VerticalOptions="Center" />
+        </Border>
 
     </Grid>
 

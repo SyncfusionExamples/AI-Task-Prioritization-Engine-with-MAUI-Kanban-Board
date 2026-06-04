@@ -9,11 +9,10 @@ This sample demonstrates an AI-driven task prioritization engine with a .NET MAU
                      ColumnMappingPath="Category" SortingMappingPath="Index"
                      AutoGenerateColumns="False" CardTemplate="{StaticResource CardTemplate}">
 
-        <!-- Placeholder Style -->
         <kanban:SfKanban.Resources>
             <kanban:KanbanPlaceholderStyle x:Key="PlaceholderStyle" Background="#FAC7AD"
-                                        SelectionIndicatorBackground="#FAC7AD"
-                                        SelectionIndicatorStroke="#914C00">
+                                    SelectionIndicatorBackground="#FAC7AD"
+                                    SelectionIndicatorStroke="#914C00">
 
                 <kanban:KanbanPlaceholderStyle.SelectionIndicatorTextStyle>
                     <kanban:KanbanTextStyle TextColor="#914C00" />
@@ -22,21 +21,25 @@ This sample demonstrates an AI-driven task prioritization engine with a .NET MAU
             </kanban:KanbanPlaceholderStyle>
         </kanban:SfKanban.Resources>
 
-        <!-- Columns -->
-        <kanban:KanbanColumn Title="To Do" Categories="Open" Background="#D6EAF5"
-                            PlaceholderStyle="{StaticResource PlaceholderStyle}" />
+        <kanban:KanbanColumn Title="To Do" Categories="Open" Background="#DAE0E3"
+                        PlaceholderStyle="{StaticResource PlaceholderStyle}" />
 
-        <kanban:KanbanColumn Title="In Progress" Categories="In Progress" Background="#FFF8DC"
-                            PlaceholderStyle="{StaticResource PlaceholderStyle}" />
+        <kanban:KanbanColumn Title="In Progress" Categories="In Progress" Background="#D6EAF5"
+                        PlaceholderStyle="{StaticResource PlaceholderStyle}" />
 
-        <kanban:KanbanColumn Title="Review" Categories="Code Review" Background="#FFE4E1"
-                            PlaceholderStyle="{StaticResource PlaceholderStyle}" />
+        <kanban:KanbanColumn Title="Review" Categories="Code Review" Background="#FFF8DC"
+                        PlaceholderStyle="{StaticResource PlaceholderStyle}" />
 
         <kanban:KanbanColumn Title="Done" Categories="Done" Background="#DCEDDC" AllowDrag="False"
-                            PlaceholderStyle="{StaticResource PlaceholderStyle}" />
+                        PlaceholderStyle="{StaticResource PlaceholderStyle}" />
 
     </kanban:SfKanban>
 ```
+
+## Output
+
+![Kanban Board](Kanban Board.png)
+
 
 ## Requirements to run the demo
 
