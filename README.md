@@ -38,7 +38,7 @@ This sample demonstrates an AI-driven task prioritization engine with a .NET MAU
 
 ## Output
 
-![Kanban Board](<AITaskPrioritization2026-06-0415-57-46-ezgif.com-video-to-gif-converter (1)-1.gif>)
+![Kanban Board](<Kanban Board.gif>)
 
 ## Requirements to run the demo
 
