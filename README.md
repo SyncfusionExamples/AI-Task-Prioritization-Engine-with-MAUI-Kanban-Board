@@ -38,7 +38,7 @@ This sample demonstrates an AI-driven task prioritization engine with a .NET MAU
 
 ## Output
 
-![Kanban Board](Kanban Board.png)
+![Kanban Board](<Kanban Board.png>)
 
 
 ## Requirements to run the demo
