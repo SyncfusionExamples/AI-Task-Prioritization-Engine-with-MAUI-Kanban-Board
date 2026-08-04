@@ -1,6 +1,30 @@
 # AI Task Prioritization Engine with MAUI Kanban Board
 
-This sample demonstrates an AI-driven task prioritization engine with a .NET MAUI Kanban Board.
+This sample demonstrates an AI-driven task prioritization engine with a .NET MAUI Kanban Board. The application leverages an AI task prioritization engine to automatically analyze tasks and reorder them based on business impact, dependencies, and due dates.
+
+## Overview
+
+Managing large numbers of tasks often requires continuous prioritization. This sample uses an AI model to evaluate task information and automatically determine the most important work items.
+
+The AI engine considers:
+
+   - Due dates and urgency
+   - Task impact on business operations
+   - Dependencies between tasks
+   - Critical system components such as APIs, payments, and security
+   - Lower-priority UI or cosmetic changes
+
+The prioritized tasks are then displayed in a visually organized Syncfusion MAUI Kanban Board, helping teams focus on the most important work first.
+
+## Key Features
+
+   - Syncfusion .NET MAUI Kanban Board integration
+   - AI-driven task prioritization
+   - Automatic ranking based on due date and impact
+   - Dependency-aware task ordering
+   - Drag-and-drop workflow management
+   - Custom Kanban column styling
+   - Cross-platform .NET MAUI application
 
 ## Sample
 
@@ -48,7 +72,7 @@ To run the demo, refer to [System Requirements for .NET MAUI](https://help.syncf
 
 ### Path too long exception
 
-If you are facing path too long exception when building this example project, close Visual Studio and rename the repository to short and build the project.
+If you encounter a "Path Too Long" exception while building the project, close Visual Studio, rename the repository folder to a shorter name, and rebuild the project.
 
 ## License
 
